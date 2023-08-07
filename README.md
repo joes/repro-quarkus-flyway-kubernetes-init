@@ -3,7 +3,7 @@
 Reproduces:
 
  * flyway is not setting `Deployment.spec.template.spec.serviceAccountName` such that its RoleBinding can be applied
- * flyway is not setting "imagePullSecrets" in the flyway init job spec according to the imagePullSecrets used by the Deployment
+ * flyway is not setting `imagePullSecrets` in the flyway init job spec according to the imagePullSecrets used by the Deployment
 
  ## Steps to reproduce
 
@@ -33,7 +33,7 @@ No match found.
 
 ## Expected behavior
 
-The `Deployment` in the generated yaml should have the `serviceAccountName` set to the one found in the `RoleBinding` and the `imagePullSecrets`` of the flyway job set to the secrets used by the Deployment.
+The `Deployment` in the generated yaml should have the `serviceAccountName` set to the one found in the `RoleBinding` and the `imagePullSecrets` of the flyway job set to the secrets used by the Deployment.
 
 The serviceAccountName is set correctly in Deployment if the extension "kubernetes-client" is introduced:
 
