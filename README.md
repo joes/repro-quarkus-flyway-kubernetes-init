@@ -23,7 +23,7 @@ Reproduces:
  
 No match found.
 
-Check imagePullSecrets set for job (requires https://github.com/mikefarah/yq):g
+Check imagePullSecrets set for job (requires https://github.com/mikefarah/yq):
 
  ```bash
   yq 'select(.kind=="Job")' target/kubernetes/kubernetes.yml | grep -A1 -i "imagePullSecrets"
